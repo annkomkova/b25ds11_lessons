@@ -11,11 +11,11 @@
     <table>
       <thead>
         <tr>
-          <th>Неделя</th>
-          <th>Название</th>
-          <th>Предмет</th>
-          <th>Дата</th>
-          <th>Тип</th>
+          <th><span class="week">Неделя</span></th>
+          <th><span class="theme">Название</span></th>
+          <th><span class="subject">Предмет</span></th>
+          <th><span class="date">Дата</span></th>
+          <th><span class="type">Тип</span></th>
           <th></th>
         </tr>
       </thead>
@@ -24,21 +24,72 @@
         <tr>
           <td>#4.1</td>
           <td>Структура многостраничного сайта. Меню и форма</td>
-          <td>Технологии</td>
+          <td><span class="red">Технологии</span></td>
           <td>06.04.2026</td>
-          <td>Воркшоп</td>
+          <td><span class="green">Воркшоп</span></td>
           <td></td>
         </tr>
 
         <tr>
           <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>Вводное занятие, многостраничный сайт</td>
+          <td><span class="blue">Арт-практика</span></td>
+          <td>04.04.2026</td>
+          <td><span class="green">Воркшоп</span></td>
           <td></td>
         </tr>
+
+        <tr>
+          <td>#4.2</td>
+          <td>Работа с формой, бургерное меню</td>
+          <td><span class="red">Технологии</span></td>
+          <td>13.04.2026</td>
+          <td><span class="green">Воркшоп</span></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>Варфреймы, проектирование сайта</td>
+          <td><span class="blue">Арт-практика</span></td>
+          <td>11.04.2026</td>
+          <td>
+            <span class="yellow">Лекция</span>
+            <span class="green">Воркшоп</span>
+          </td>
+          <td></td>
+        </tr>
+
+        <!-- <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> -->
       </tbody>
+
+      <tfoot>
+        <td><input type="text" name="week" /></td>
+        <td><input type="text" name="theme" /></td>
+        <td>
+          <select name="subject">
+            <option value="Технологии">Технологии</option>
+            <option value="Арт-практика">Арт-практика</option>
+          </select>
+        </td>
+        <td><input type="text" name="date" /></td>
+        <td>
+          <select name="type">
+            <option value="Лекция">Лекция</option>
+            <option value="Воркшоп">Воркшоп</option>
+            <option value="Ревью">Ревью</option>
+            <option value="Домашка">Домашка</option>
+          </select>
+        </td>
+        <td><button type="button">+</button></td>
+      </tfoot>
     </table>
   </body>
 </html>
