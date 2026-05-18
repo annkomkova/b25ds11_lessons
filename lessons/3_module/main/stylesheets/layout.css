@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #222;
+  color: #eee;
+  height: 4000px;
+  /* cursor: none; */
+}
+section {
+  padding: 8vw 2vw;
+}
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  animation: cursor 5s infinite;
+  position: absolute;
+  z-index: 10;
+  mix-blend-mode: difference;
+}
+
+.header {
+  padding: 22vw 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vw;
+  position: relative;
+}
+.header h1 {
+  font-family: 'Rubik Beastly', system-ui;
+  text-transform: uppercase;
+  font-size: 10vw;
+  text-align: center;
+}
+.header span:hover {
+  animation: shakeLetter 0.5s infinite;
+  display: inline-block;
+}
+.randomCoordsButton {
+  padding: 1vw 2vw;
+  background-color: #222;
+  border-radius: 2vw;
+  border: 0.2vw solid #4cc9f0;
+  color: #4cc9f0;
+  font-size: 1.6vw;
+  cursor: pointer;
+  transition: all ease 0.6s;
+}
+.popup {
+  width: 6vw;
+  height: 6vw;
+  position: relative;
+}
+.popupEl {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #eee;
+  font-size: 1.6vw;
+  animation: popupEl 1.5s ease;
+  opacity: 0;
+}
+.popupContainer {
+  width: 10vw;
+  height: 10vw;
+}
+
+.flipCards {
+  display: flex;
+  justify-content: space-between;
+}
+.flipCard {
+  width: 23vw;
+  height: 13vw;
+  perspective: 1000px;
+}
+.flipCardWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in;
+  cursor: pointer;
+}
+/* .flipCardWrapper:hover {
+  transform: rotateY(-180deg);
+} */
+.flip {
+  transform: rotateY(-180deg);
+}
+.flipCardFront,
+.flipCardBack {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 2vw;
+  backface-visibility: hidden;
+}
+.flipCardFront {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  background: radial-gradient(#404040, #2e2e2e);
+  box-shadow: 0 0.5vw 2vw 0.6vw #1e1e1e;
+}
+.flipCardBack {
+  transform: rotateY(-180deg);
+}
+.flipCardBack.blue {
+  background: radial-gradient(#77d3ef, #4cc9f0);
+  box-shadow: 0 0.5vw 2vw 0.6vw #4cc9f0;
+}
+.flipCardBack.purple {
+  background: radial-gradient(#e67fef, #f040ff);
+  box-shadow: 0 0.5vw 2vw 0.6vw #f040ff;
+}
+.flipCardBack.green {
+  background: radial-gradient(#8ef194, #5def67);
+  box-shadow: 0 0.5vw 2vw 0.6vw #5def67;
+}
+.flipCardBack.yellow {
+  background: radial-gradient(#f0f885, #e4ef4e);
+  box-shadow: 0 0.5vw 2vw 0.6vw #e4ef4e;
+}
+
+.progressBarWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.progressBarButton,
+.randomImageButton {
+  width: 8vw;
+  height: 4vw;
+  border-radius: 2vw;
+  border: 0.2vw solid #4cc9f0;
+  color: #4cc9f0;
+  background-color: transparent;
+  font-size: 1.6vw;
+  cursor: pointer;
+  transition: all ease 0.6s;
+}
+.randomImageButton {
+  width: 11vw;
+}
+.progressBarButton:hover,
+.randomImageButton:hover,
+.randomCoordsButton:hover {
+  background: radial-gradient(#77d3ef, #4cc9f0);
+  box-shadow: 0 0.2vw 1vw 0.3vw #4cc9f0;
+  color: #eee;
+}
+.progressBar {
+  border-radius: 2vw;
+  width: 84vw;
+  height: 4vw;
+  background: radial-gradient(#404040, #2e2e2e);
+  box-shadow: 0 0.5vw 2vw 0.6vw #1e1e1e;
+  position: relative;
+}
+.progress {
+  background: radial-gradient(#77d3ef, #4cc9f0);
+  box-shadow: 0 0vw 1vw 0.3vw #4cc9f0;
+  height: 100%;
+  border-radius: 2vw;
+  opacity: 0;
+}
+.progressNumber {
+  position: absolute;
+  top: 1.3vw;
+  right: 2vw;
+  font-size: 1.6vw;
+}
+
+.starWrapper {
+  position: fixed;
+  top: 2vw;
+  right: 2vw;
+}
+
+.randomElements {
+  display: flex;
+  gap: 2vw;
+}
+.randomImage {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vw;
+  background: radial-gradient(#404040, #2e2e2e);
+  box-shadow: 0 0.5vw 2vw 0.6vw #1e1e1e;
+  padding: 2vw;
+}
+.randomImage img {
+  width: 100%;
+}
+
+.changeImg {
+  width: 90%;
+  height: 90vh;
+  background: radial-gradient(#404040, #2e2e2e);
+  box-shadow: 0 0.5vw 2vw 0.6vw #1e1e1e;
+  border-radius: 2vw;
+  margin: 5vh auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.imgBox {
+  width: 20vw;
+  height: 20vw;
+  position: relative;
+}
+.blickImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: contain;
+  border-radius: 2vw;
+  opacity: 0;
+}
+.blickImg0 {
+  background-image: url('../images/blick/0.jpg');
+}
+.blickImg1 {
+  background-image: url('../images/blick/1.jpg');
+}
+.blickImg2 {
+  background-image: url('../images/blick/2.jpg');
+}
+.blickImg3 {
+  background-image: url('../images/blick/3.jpg');
+}
+.coords {
+  position: absolute;
+  padding: 2vw;
+  font-size: 1.6vw;
+  color: #eee;
+  top: 0;
+  left: 0;
+}
+
+.eyesAndParallax {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.eyes,
+.parallax {
+  background: radial-gradient(#404040, #2e2e2e);
+  box-shadow: 0 0.5vw 2vw 0.6vw #1e1e1e;
+  border-radius: 2vw;
+  width: 48%;
+  padding: 1.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  flex-wrap: wrap;
+  font-size: 2vw;
+  position: relative;
+}
+.eye {
+  width: 4vw;
+  height: 4vw;
+  border: 0.4vw solid #777;
+  border-radius: 70% 0 / 70%;
+  transform: rotate(45deg);
+  position: relative;
+}
+.dot {
+  width: 1.3vw;
+  height: 1.3vw;
+  background-color: #777;
+  border-radius: 100%;
+  transform-origin: 50% 125%;
+  position: absolute;
+  top: 8%;
+  left: 40%;
+}
+.circle {
+  position: absolute;
+  background-image: url('https://setka.design/images/web/sphere.png');
+  background-size: 102%;
+  background-position: center;
+  border-radius: 100%;
+  background-color: #000;
+  filter: grayscale(1) brightness(0.9);
+}
+.circle:nth-of-type(1) {
+  width: 10vw;
+  height: 10vw;
+  top: 75%;
+  left: 70%;
+}
+.circle:nth-of-type(2) {
+  width: 20vw;
+  height: 20vw;
+  top: 10%;
+  left: 40%;
+}
+.circle:nth-of-type(3) {
+  width: 3vw;
+  height: 3vw;
+  top: 3%;
+  left: 90%;
+}
+.circle:nth-of-type(4) {
+  width: 4vw;
+  height: 4vw;
+  top: 70%;
+  left: 35%;
+}
+.circle:nth-of-type(5) {
+  width: 6vw;
+  height: 6vw;
+  top: 15%;
+  left: 5%;
+}
+.circle:nth-of-type(6) {
+  width: 8vw;
+  height: 8vw;
+  top: 5%;
+  left: 30%;
+}
+.circle:nth-of-type(7) {
+  width: 2vw;
+  height: 2vw;
+  top: 80%;
+  left: 10%;
+}
+.circle:nth-of-type(8) {
+  width: 10vw;
+  height: 10vw;
+  top: 45%;
+  left: 10%;
+}

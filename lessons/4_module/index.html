@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Музей «Огни Москвы»</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <script defer src="javascripts/scripts.js"></script>
+    <script defer src="javascripts/index.js"></script>
+  </head>
+  <body>
+    <div id="burger"></div>
+
+    <nav class="mainMenu">
+      <a href="index.html" class="active">Главная</a>
+      <a href="about.html">О музее</a>
+      <a href="projects.html">Проекты</a>
+      <a href="excursions.html">Экскурсии</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="archive.html">Архив</a>
+    </nav>
+
+    <section>
+      <h1>Главная</h1>
+      <h2>Афиша экскурсий</h2>
+
+      <div class="afisha"></div>
+    </section>
+
+    <form action="">
+      <span class="placeholder">
+        <input type="text" name="userName" value="" placeholder="" />
+      </span>
+
+      <span class="placeholder">
+        <input type="email" name="email" value="" placeholder="" />
+      </span>
+
+      <select name="phoneCode">
+        <option value="+7">+7 (Россия)</option>
+        <option value="+1">+1 (США)</option>
+        <option value="+49">+49 (Германия)</option>
+        <option value="+33">+33 (Франция)</option>
+      </select>
+
+      <span class="placeholder">
+        <input type="tel" name="phone" value="" placeholder="" />
+      </span>
+
+      <button type="submit">Отправить</button>
+    </form>
+  </body>
+</html>

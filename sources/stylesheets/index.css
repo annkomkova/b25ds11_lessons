@@ -1,0 +1,207 @@
+/* main */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'PT Root UI';
+  font-weight: 400;
+  color: #fafafa;
+  background-color: #282828;
+}
+.page {
+  padding: 2rem;
+}
+.page,
+section,
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+section {
+  border-radius: 2rem;
+}
+.header {
+  padding: 1.5rem;
+  min-height: 22rem;
+  background-image: url('../images/noise.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  box-shadow: 0rem 0.5rem 2rem 0px #111111a1;
+}
+
+.subtitle,
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+h1,
+h2 {
+  font-size: 4rem;
+}
+.headerInfo,
+.lesson,
+.links {
+  display: flex;
+  gap: 1rem;
+}
+.headerInfo > div,
+.links > a {
+  background-color: #2b2b2b;
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+}
+.description,
+.wikimedium,
+.viewport_M,
+.viewport_S,
+.box,
+.example {
+  border-radius: 1rem;
+}
+.lesson {
+  min-height: 22rem;
+}
+.lesson {
+  opacity: 0;
+  transform: translateY(60px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+  will-change: transform, opacity;
+}
+.lesson.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.description {
+  border: 1px solid #505050;
+  box-shadow: 0rem 0.5rem 2rem 0px #111111a1;
+  padding: 1.5rem 1rem;
+  gap: 1rem;
+  width: 50%;
+  position: relative;
+  transition: transform ease 0.7s;
+}
+.description:hover {
+  transform: translateY(-0.5rem);
+}
+.description p {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 2rem;
+}
+.links {
+  position: absolute;
+  bottom: 1rem;
+}
+.links a {
+  color: #fafafa;
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+.links a:hover {
+  background-image: url('../images/noise.svg');
+  transform: scale(1.1);
+  transition: 0.6s all ease;
+  border: 1px solid #505050;
+}
+.example {
+  width: calc(50% - 1rem);
+  min-height: 20rem;
+  background-color: #1e1e1e;
+}
+/* lesson 1-8 */
+.wikimedium {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: luminosity;
+  background-image: url('../images/wikimedium.webp');
+  background-position: center center;
+  background-size: cover;
+}
+/* lesson 2.2 */
+.viewport {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 1rem;
+}
+.viewports_S {
+  width: 48%;
+  display: flex;
+  gap: 1rem;
+}
+.viewports_S,
+.viewport_M {
+  margin: 0 auto;
+  height: 45%;
+}
+.viewport_M,
+.viewport_S {
+  background-color: #505050;
+  width: 48%;
+}
+.viewport_S {
+  height: 100%;
+}
+/* lesson 2.1 */
+.adaptive p {
+  font-family: Newsreader;
+  font-size: 3rem;
+  margin: 0 auto;
+  line-height: 1;
+  font-weight: normal;
+  text-align: center;
+}
+/* lesson 2.3 */
+.animation-1 {
+  width: 80%;
+  margin: 0 auto;
+}
+.box {
+  width: 6rem;
+  height: 6rem;
+  background-color: grey;
+  position: relative;
+  mix-blend-mode: luminosity;
+}
+/* lesson 2.4 */
+.sprites {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.mario,
+.path,
+.jump {
+  width: 68px;
+  height: 68px;
+}
+.mario,
+.jump {
+  background-image: url('../../lessons/2_module/images/mario-walk-n-jump-68.png');
+}
+.path,
+.jump {
+  position: relative;
+  top: 0;
+  left: 0;
+  mix-blend-mode: luminosity;
+}
+.jump {
+  position: absolute;
+  opacity: 0;
+}

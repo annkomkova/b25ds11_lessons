@@ -1,0 +1,316 @@
+/* общие стили для страницы */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ol,
+ul,
+blockquote,
+hr {
+  width: 700px;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: bold;
+}
+p,
+blockquote,
+ol,
+ul {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+img {
+  width: 1024px;
+  margin: 0 auto;
+  display: block;
+}
+h1 + p {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 22px;
+}
+/* h1 + hr + p {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 22px;
+} */
+a {
+  color: inherit;
+}
+h1 {
+  margin: 50px auto;
+  font-size: 38px;
+  line-height: 44px;
+}
+h2 {
+  margin-top: 40px;
+  font-size: 32px;
+  line-height: 36px;
+}
+h3 {
+  margin-top: 36px;
+  font-size: 28px;
+  line-height: 32px;
+}
+h4 {
+  margin-top: 32px;
+  font-size: 24px;
+  line-height: 28px;
+}
+h5 {
+  margin-top: 28px;
+  font-size: 22px;
+  line-height: 24px;
+}
+hr {
+  width: 1024px;
+  margin: 20px auto;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  margin-top: 10px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 30px;
+}
+li {
+  margin: 8px 0;
+}
+blockquote {
+  font-style: italic;
+  position: relative;
+}
+blockquote::before {
+  content: '';
+  width: 3px;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: -17px;
+}
+
+/* стили для бокового меню */
+.sidebar {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 50px;
+  opacity: 0.3;
+  transition: all ease 0.3s;
+}
+.sidebar:hover {
+  opacity: 1;
+  transition: all ease 0.6s;
+}
+.sidebar ol {
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  font-size: 15px;
+}
+.sidebar ol ol {
+  color: rgba(0, 0, 0, 0.4);
+}
+.sidebar li {
+  line-height: 100%;
+}
+.sidebar a {
+  text-decoration: none;
+}
+
+/* стили для верхнего меню */
+.menubar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-color: white;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+}
+.menubar img {
+  width: 350px;
+  margin: 0;
+}
+.menubar a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+  transition: all ease 0.3s;
+}
+.menubar a:hover {
+  color: #000;
+  transition: all ease 0.6s;
+}
+
+/* стили для about.html */
+/* .about::before {
+  content: '';
+  width: 1440px;
+  height: 3120px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 720px);
+  background-image: url('../images/1440.png');
+  opacity: 0.2;
+} */
+.about {
+  overflow-x: hidden;
+}
+.about section {
+  display: flex;
+  width: 1440px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.about section div {
+  width: 48%;
+}
+.about h2 {
+  font-weight: 400;
+  width: 100%;
+  font-size: 38px;
+  line-height: 46px;
+  margin: 0;
+}
+.about p {
+  width: 100%;
+  font-size: 26px;
+  line-height: 36px;
+  margin: 26px 0;
+}
+.about div:nth-of-type(2) img {
+  width: 1100px;
+}
+.about div:nth-of-type(1) img {
+  width: 700px;
+}
+#firstSection,
+#thirdSection {
+  margin-top: 138px;
+}
+#firstSection div:nth-of-type(1) {
+  padding: 40px 0 0 168px;
+}
+#secondSection {
+  margin-top: 90px;
+}
+#secondSection div:nth-of-type(2) {
+  padding: 60px 60px 0 10px;
+}
+#thirdSection div:nth-of-type(1) {
+  padding: 10px 0 0 168px;
+}
+#thirdSection img {
+  border-left: 1px solid #eee;
+}
+#thirdSection {
+  border-bottom: 1px solid #eee;
+}
+#fourthSection {
+  flex-direction: column;
+  align-items: center;
+  padding: 110px 290px;
+}
+#fourthSection h2,
+#fourthSection p {
+  text-align: center;
+}
+#fourthSection div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 60px;
+}
+#fourthSection a {
+  font-size: 18px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 14px 26px;
+  border-radius: 4px;
+  color: #ccc;
+  transition: all ease 0.3s;
+}
+#fourthSection a:hover {
+  color: #222;
+  border: 1px solid #222;
+  transition: all ease 0.6s;
+}
+#fourthSection a:nth-of-type(2) {
+  background-color: #444;
+  border: 1px solid #444;
+  color: #eee;
+}
+#fourthSection a:nth-of-type(2):hover {
+  background-color: #222;
+  border: 1px solid #222;
+  transition: all ease 0.6s;
+}
+
+/* стили для главной страницы с карточками */
+.index {
+  background-color: #eee;
+}
+.index section {
+  margin-top: 7.8vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.index p {
+  color: rgba(0, 0, 0, 0.4);
+}
+.index h2,
+.index p {
+  width: 100%;
+}
+.index .card {
+  width: 54vw;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0 1.5vw;
+  background-color: white;
+  text-decoration: none;
+}
+.index .cardImg {
+  height: 15.6vw;
+  margin-top: 1.5vw;
+  background-image: url('../images/narkomfin.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

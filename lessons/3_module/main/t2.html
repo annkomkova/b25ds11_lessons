@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Camera Toggle</title>
+  </head>
+
+  <body>
+    <button id="toggleCamera">Включить камеру</button>
+
+    <br /><br />
+
+    <video id="video" autoplay playsinline width="500"></video>
+
+    <script>
+      const button = document.getElementById('toggleCamera')
+      const video = document.getElementById('video')
+
+      let stream = null
+      let cameraOn = false
+
+      button.addEventListener('click', async () => {
+        if (!cameraOn) {
+          try {
+            stream = await navigator.mediaDevices.getUserMedia({
+              video: true,
+              audio: false
+            })
+
+            video.srcObject = stream
+            cameraOn = true
+            button.textContent = 'Выключить камеру'
+          } catch (error) {
+            console.error('Ошибка доступа к камере:', error)
+          }
+        } else {
+          // выключаем камеру
+          stream.getTracks().forEach((track) => track.stop())
+
+          video.srcObject = null
+          cameraOn = false
+          button.textContent = 'Включить камеру'
+        }
+      })
+    </script>
+  </body>
+</html>

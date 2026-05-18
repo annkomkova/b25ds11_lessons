@@ -1,0 +1,198 @@
+/* общие стили */
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  font-size: 1.6vw;
+  padding: 1.6vw;
+  font-family: 'PT Root UI';
+}
+.mainMenu {
+  width: 60%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1.6vw 2vw;
+  border-radius: 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+.mainMenu a {
+  color: #222;
+  text-decoration: none;
+  transition: color ease 0.4s;
+}
+.mainMenu a.active,
+.mainMenu a.active:hover {
+  color: cornflowerblue;
+}
+.mainMenu a:hover {
+  color: #777;
+}
+/* стили формы */
+form {
+  width: 40%;
+  background-color: white;
+  border-radius: 2vw;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  margin: 0 auto;
+}
+.placeholder input,
+select {
+  width: 100%;
+  height: 4vw;
+  font-size: 1.6vw;
+  border-radius: 1.6vw;
+  border: 0.07vw solid #777;
+  padding-left: 1.6vw;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+.placeholder {
+  position: relative;
+  width: 100%;
+}
+.placeholder::before {
+  position: absolute;
+  top: 1.2vw;
+  left: 1.6vw;
+  color: #777;
+  transition: all ease 0.4s;
+}
+.placeholder:has(input:focus)::before,
+.placeholder:has(input:not(:placeholder-shown))::before {
+  font-size: 0.9vw;
+  top: 0.5vw;
+}
+.placeholder:has(input[name='userName'])::before {
+  content: 'Имя пользователя';
+}
+.placeholder:has(input[name='email'])::before {
+  content: 'Электронная почта';
+}
+.placeholder:has(input[name='phone'])::before {
+  content: 'Номер телефона';
+}
+form button {
+  width: 34%;
+  border: 0.1vw solid cornflowerblue;
+  color: cornflowerblue;
+  padding: 1.2vw 0;
+  border-radius: 2vw;
+  background-color: white;
+  font-size: 1.6vw;
+  transition: all ease 0.6s;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: cornflowerblue;
+  color: white;
+}
+h1 {
+  font-weight: 700;
+  font-size: 2.6vw;
+}
+h2 {
+  font-size: 2.2vw;
+}
+/* стили афиши экскурсий */
+.afisha {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+  padding: 2vw;
+}
+.afishaCard {
+  width: 30%;
+  background-color: white;
+  border-radius: 2vw;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  position: relative;
+}
+.afishaDate {
+  text-align: right;
+  color: #777;
+  font-size: 1.2vw;
+}
+.afishaDuration {
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  font-size: 1.2vw;
+  color: cornflowerblue;
+}
+.afishaHeader {
+  font-weight: 500;
+}
+.afishaTimeWrapper {
+  display: flex;
+  gap: 1.6vw;
+}
+.afishaTimeEl {
+  border-radius: 1.6vw;
+  background-color: cornflowerblue;
+  color: white;
+  padding: 0.6vw 1vw;
+  font-size: 1.2vw;
+}
+/* стили магазина товаров */
+.shopList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.productCard {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 2vw;
+  overflow: hidden;
+}
+.productImage {
+  width: 100%;
+}
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vw;
+  padding: 0 2vw 2vw;
+}
+.productPrice {
+  font-size: 1.2vw;
+  color: #777;
+}
+.productButtons {
+  display: flex;
+  gap: 1vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 1.6vw;
+  width: 30%;
+  padding: 0.6vw 1vw;
+}
+.productButtons button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.6vw;
+  cursor: pointer;
+}
+.productButtons p {
+  user-select: none;
+}

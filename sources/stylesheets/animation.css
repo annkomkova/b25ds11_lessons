@@ -1,0 +1,209 @@
+.path:hover,
+.path:hover > div,
+.box:hover,
+.viewport:hover {
+  mix-blend-mode: normal;
+  animation-play-state: paused;
+}
+.box {
+  animation: example 10s infinite alternate-reverse;
+}
+.mario {
+  animation: walk 0.4s infinite steps(1);
+}
+.path {
+  animation: path 8s infinite linear;
+}
+
+.jump {
+  animation: jump 8s infinite linear;
+}
+.viewports_S,
+.viewport_M {
+  animation: viewport_div 8s infinite linear;
+}
+.viewport {
+  animation: viewport 8s infinite linear;
+}
+.adaptive p {
+  animation: wacky 5s ease infinite;
+}
+.adaptive p:hover {
+  animation-play-state: paused;
+}
+.adaptive p:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.adaptive p:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.adaptive p:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.adaptive p:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.adaptive p:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.links a:hover {
+  animation: noising 1.5s infinite ease;
+  font-weight: 700;
+}
+@keyframes wacky {
+  0% {
+    font-variation-settings: 'wght' 100;
+  }
+  25% {
+    font-variation-settings: 'wght' 100;
+  }
+  50% {
+    font-variation-settings: 'wght' 900;
+  }
+  75% {
+    font-variation-settings: 'wght' 900;
+  }
+  100% {
+    font-variation-settings: 'wght' 100;
+  }
+}
+@keyframes viewport {
+  0% {
+    width: 80%;
+  }
+  25% {
+    flex-direction: column;
+  }
+  50% {
+    width: 40%;
+  }
+  75% {
+    flex-direction: row;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes jump {
+  0% {
+    opacity: 0;
+  }
+  47% {
+    opacity: 0;
+    background-position: -272px 0;
+  }
+  48% {
+    opacity: 1;
+    background-position: -272px 0;
+  }
+  50% {
+    opacity: 1;
+    background-position: -340px 0;
+  }
+  52% {
+    opacity: 0;
+    background-position: -340px 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes path {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  48% {
+    left: 48%;
+    top: 0;
+  }
+  50% {
+    left: 50%;
+    top: -100px;
+  }
+  52% {
+    left: 52%;
+    top: 0;
+  }
+  100% {
+    left: 100%;
+    top: 0;
+  }
+}
+
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0;
+    top: 0;
+  }
+  25% {
+    background-color: yellow;
+    left: 80%;
+    top: 0;
+  }
+  50% {
+    background-color: blue;
+    left: 80%;
+    top: 14rem;
+  }
+  75% {
+    background-color: green;
+    left: 0;
+    top: 14rem;
+  }
+  100% {
+    background-color: red;
+    left: 0;
+    top: 0;
+  }
+}
+@keyframes walk {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: -68px 0;
+  }
+  50% {
+    background-position: -136px 0;
+  }
+  75% {
+    background-position: -204px 0;
+  }
+}
+@keyframes noising {
+  0% {
+    background-position: 0, 0;
+  }
+  10% {
+    background-position: -5%, -5%;
+  }
+  20% {
+    background-position: -10%, 5%;
+  }
+  30% {
+    background-position: 5%, -10%;
+  }
+  40% {
+    background-position: -5%, 15%;
+  }
+  50% {
+    background-position: -10%, 5%;
+  }
+  60% {
+    background-position: 15%, 0;
+  }
+  70% {
+    background-position: 0, 10%;
+  }
+  80% {
+    background-position: -15%, 0;
+  }
+  90% {
+    background-position: 10%, 5%;
+  }
+  100% {
+    background-position: 5%, 0;
+  }
+}

@@ -1,0 +1,51 @@
+button {
+  cursor: pointer;
+  margin-top: 11vw;
+}
+.box {
+  width: 10vw;
+  height: 10vw;
+  background-color: cornflowerblue;
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+}
+.coralCircle {
+  border-radius: 100%;
+  background-color: coral;
+}
+.startAnim {
+  animation: startAnim 1.5s ease-in forwards;
+}
+.endAnim {
+  animation: endAnim 1.5s ease-in forwards;
+}
+
+@keyframes startAnim {
+  0% {
+    top: 1vw;
+    left: 1vw;
+    background-color: cornflowerblue;
+    transform: rotate(0);
+  }
+  100% {
+    top: 20vw;
+    left: 89vw;
+    background-color: navy;
+    transform: rotate(360deg);
+  }
+}
+@keyframes endAnim {
+  0% {
+    top: 20vw;
+    left: 89vw;
+    background-color: navy;
+    transform: rotate(360deg);
+  }
+  100% {
+    top: 1vw;
+    left: 1vw;
+    background-color: cornflowerblue;
+    transform: rotate(0);
+  }
+}

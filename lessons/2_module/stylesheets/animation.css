@@ -1,0 +1,370 @@
+@keyframes colorChange {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: cornflowerblue;
+  }
+}
+@keyframes moving {
+  from {
+    margin-left: 0;
+    background-color: white;
+  }
+  to {
+    margin-left: 90vw;
+    background-color: cornflowerblue;
+  }
+}
+@keyframes box-to-circle {
+  0% {
+    width: 14vw;
+    border-radius: 0;
+    background-color: red;
+  }
+  50% {
+    width: 8vw;
+    border-radius: 0;
+    background-color: goldenrod;
+  }
+  100% {
+    width: 8vw;
+    border-radius: 100%;
+    background-color: green;
+  }
+}
+@keyframes marioWalk {
+  0% {
+    background-position: 0 top;
+  }
+  25% {
+    background-position: -4.72vw top;
+  }
+  50% {
+    background-position: -9.44vw top;
+  }
+  75% {
+    background-position: -14.167vw top;
+  }
+}
+@keyframes marioMove {
+  0% {
+    transform: translate(-4.72vw, 0);
+  }
+  48% {
+    transform: translate(48vw, 0);
+  }
+  50% {
+    transform: translate(50vw, -4.72vw);
+  }
+  52% {
+    transform: translate(52vw, 0);
+  }
+  100% {
+    transform: translate(100vw, 0);
+  }
+}
+@keyframes marioJump {
+  0% {
+    opacity: 0;
+  }
+  48% {
+    opacity: 0;
+  }
+  48.1% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 1;
+  }
+  52.1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blast {
+  0% {
+    opacity: 0;
+    background-position: 0 0;
+  }
+  /* первый ряд */
+  3% {
+    opacity: 1;
+    background-position: 0 0;
+  }
+  6% {
+    background-position: -151px 0;
+  }
+  9% {
+    background-position: -302px 0;
+  }
+  12% {
+    background-position: -453px 0;
+  }
+  15% {
+    background-position: -604px 0;
+  }
+  18% {
+    background-position: -755px 0;
+  }
+  21% {
+    background-position: -906px 0;
+  }
+  24% {
+    background-position: -1057px 0;
+  }
+  /* второй ряд */
+  27% {
+    background-position: 0 -151px;
+  }
+  30% {
+    background-position: -151px -151px;
+  }
+  33% {
+    background-position: -302px -151px;
+  }
+  36% {
+    background-position: -453px -151px;
+  }
+  39% {
+    background-position: -604px -151px;
+  }
+  42% {
+    background-position: -755px -151px;
+  }
+  45% {
+    background-position: -906px -151px;
+  }
+  48% {
+    background-position: -1057px -151px;
+  }
+  /* третий ряд */
+  51% {
+    background-position: 0 -302px;
+  }
+  54% {
+    background-position: -151px -302px;
+  }
+  57% {
+    background-position: -302px -302px;
+  }
+  60% {
+    background-position: -453px -302px;
+  }
+  63% {
+    background-position: -604px -302px;
+  }
+  66% {
+    background-position: -755px -302px;
+  }
+  69% {
+    background-position: -906px -302px;
+  }
+  72% {
+    background-position: -1057px -302px;
+  }
+  /* четвёртый ряд */
+  75% {
+    background-position: 0 -453px;
+  }
+  78% {
+    background-position: -151px -453px;
+  }
+  81% {
+    background-position: -302px -453px;
+  }
+  84% {
+    background-position: -453px -453px;
+  }
+  87% {
+    background-position: -604px -453px;
+  }
+  90% {
+    background-position: -755px -453px;
+  }
+  93% {
+    background-position: -906px -453px;
+  }
+  96% {
+    background-position: -1057px -453px;
+  }
+}
+@keyframes blast-vw {
+  0% {
+    opacity: 0;
+    background-position: 0 0;
+  }
+  /* первый ряд */
+  3% {
+    opacity: 1;
+    background-position: 0 0;
+  }
+  6% {
+    background-position: -11.8vw 0;
+  }
+  9% {
+    background-position: -23, 594vw 0;
+  }
+  12% {
+    background-position: -35.39vw 0;
+  }
+  15% {
+    background-position: -47.1875vw 0;
+  }
+  18% {
+    background-position: -58.984vw 0;
+  }
+  21% {
+    background-position: -70.78vw 0;
+  }
+  24% {
+    background-position: -82.578vw 0;
+  }
+  /* второй ряд */
+  27% {
+    background-position: 0 -11.8vw;
+  }
+  30% {
+    background-position: -11.8vw -11.8vw;
+  }
+  33% {
+    background-position: -23, 594vw -11.8vw;
+  }
+  36% {
+    background-position: -35.39vw -11.8vw;
+  }
+  39% {
+    background-position: -47.1875vw -11.8vw;
+  }
+  42% {
+    background-position: -58.984vw -11.8vw;
+  }
+  45% {
+    background-position: -70.78vw -11.8vw;
+  }
+  48% {
+    background-position: -82.578vw -11.8vw;
+  }
+  /* третий ряд */
+  51% {
+    background-position: 0 -23, 594vw;
+  }
+  54% {
+    background-position: -11.8vw -23, 594vw;
+  }
+  57% {
+    background-position: -23, 594vw -23, 594vw;
+  }
+  60% {
+    background-position: -35.39vw -23, 594vw;
+  }
+  63% {
+    background-position: -47.1875vw -23, 594vw;
+  }
+  66% {
+    background-position: -58.984vw -23, 594vw;
+  }
+  69% {
+    background-position: -70.78vw -23, 594vw;
+  }
+  72% {
+    background-position: -82.578vw -23, 594vw;
+  }
+  /* четвёртый ряд */
+  75% {
+    background-position: 0 -35.39vw;
+  }
+  78% {
+    background-position: -11.8vw -35.39vw;
+  }
+  81% {
+    background-position: -23, 594vw -35.39vw;
+  }
+  84% {
+    background-position: -35.39vw -35.39vw;
+  }
+  87% {
+    background-position: -47.1875vw -35.39vw;
+  }
+  90% {
+    background-position: -58.984vw -35.39vw;
+  }
+  93% {
+    background-position: -70.78vw -35.39vw;
+  }
+  96% {
+    background-position: -82.578vw -35.39vw;
+  }
+}
+
+@keyframes eyes {
+  0% {
+    background-position: -640px top;
+  }
+  33% {
+    background-position: -800px top;
+  }
+  66% {
+    background-position: -960px top;
+  }
+}
+@keyframes mouth {
+  0% {
+    background-position: -160px top;
+  }
+  33% {
+    background-position: -320px top;
+  }
+  66% {
+    background-position: -480px top;
+  }
+}
+@keyframes move-row {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes crystal {
+  0% {
+    background-position-y: 0;
+  }
+  8% {
+    background-position-y: -46.875vw;
+  }
+  16% {
+    background-position-y: -93.75vw;
+  }
+  24% {
+    background-position-y: -140.625vw;
+  }
+  32% {
+    background-position-y: -187.5vw;
+  }
+  40% {
+    background-position-y: -234.375vw;
+  }
+  48% {
+    background-position-y: -281.25vw;
+  }
+  56% {
+    background-position-y: -328.125vw;
+  }
+  64% {
+    background-position-y: -375vw;
+  }
+  72% {
+    background-position-y: -421.875vw;
+  }
+  80% {
+    background-position-y: -468.75vw;
+  }
+  88% {
+    background-position-y: -515.625vw;
+  }
+}
