@@ -154,6 +154,8 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 2vw auto;
+  padding: 2vw 0;
 }
 .productCard {
   width: 30%;
@@ -195,4 +197,65 @@ h2 {
 }
 .productButtons p {
   user-select: none;
+}
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 90%;
+  margin: 2vw auto;
+}
+.itemCard {
+  width: 100%;
+  background-color: white;
+  border-radius: 2vw;
+  padding: 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+.itemImage {
+  width: 16%;
+}
+.itemInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 74%;
+  align-items: center;
+}
+.itemInfo button {
+  background-color: transparent;
+  border: none;
+  font-size: 4vw;
+  cursor: pointer;
+}
+.cart {
+  padding: 4vw;
+}
+.buy {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.buyWindow {
+  background-color: white;
+  border-radius: 2vw;
+  padding: 2vw;
+}
+.cartButton {
+  cursor: pointer;
+  padding: 0.5vw 1vw;
+  background-color: cornflowerblue;
+  border-radius: 2vw;
+  color: white;
+  display: inline-block;
 }

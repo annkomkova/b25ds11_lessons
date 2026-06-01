@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!-- <script defer src="javascripts/scripts.js"></script> -->
+    <script defer src="javascripts/cart.js"></script>
+  </head>
+  <body>
+    <div id="burger"></div>
+
+    <nav class="mainMenu">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О музее</a>
+      <a href="projects.html">Проекты</a>
+      <a href="excursions.html">Экскурсии</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="archive.html">Архив</a>
+      <a href="shop.html" class="active">Магазин</a>
+      <a href="cart.html">🛒 <span class="cartCount"></span></a>
+    </nav>
+
+    <section class="cart">
+      <h1>Корзина</h1>
+      <div class="cartItems"></div>
+      <h2 class="totalPrice"></h2>
+      <div class="cartButton">купить</div>
+    </section>
+
+    <section class="buy">
+      <div class="buyWindow">
+        <p>Спасибо, ваш заказ принят!</p>
+      </div>
+    </section>
+  </body>
+</html>
